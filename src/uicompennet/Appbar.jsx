@@ -5,7 +5,7 @@ import img from '../uicompennet/me.jpg'
 const Appbar = ({ drawerWidth }) => {
   return (
     <AppBar
-      sx={{ width: `calc(100% - ${drawerWidth}px)`, ml: `${drawerWidth}px` }}
+      sx={{ width: `calc(100% - ${drawerWidth}px)`, ml: {xs:0,sm:`${drawerWidth}px`} }}
       position="static"
     >
       <Toolbar>
