@@ -68,7 +68,7 @@ const Drawerr = ({drawerWidth,setMymode}) => {
               bgcolor:
               loaction.pathname==="/"
               ?
-              theme.palette.primary.main
+              theme.palette.favcolor.main
               :null,
           }} 
           
@@ -83,7 +83,15 @@ navigate('/')
               <ListItemText primary="Home" />
             </ListItemButton>
           </ListItem>
-          <ListItem disablePadding>
+
+          <ListItem 
+            sx={{
+              bgcolor:
+              loaction.pathname==="/Create"
+              ?
+              theme.palette.ali.main
+              :null,
+          }} disablePadding>
             <ListItemButton onClick={()=>{
 navigate("/Create")
 
@@ -94,6 +102,8 @@ navigate("/Create")
               <ListItemText primary="Create" />
             </ListItemButton>
           </ListItem>
+
+
 
           <ListItem disablePadding>
             <ListItemButton onClick={()=>{
