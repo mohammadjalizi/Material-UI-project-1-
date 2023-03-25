@@ -42,20 +42,24 @@ const Drawerr = ({drawerWidth,setMymode}) => {
           dark
         </Button> */}
 
-<IconButton sx={{ ml: 1 }}
+
+  
+       
+    
+   
+        <List>
+        <ListItem sx={{display:'flex',justifyContent:'center'}} disablePadding>
+        <IconButton sx={{ ml: 1 }}
  onClick={()=>{
   setMymode(theme.palette.mode==="light"?"dark" : "light")
   
           }} color="inherit">
         {theme.palette.mode === 'dark' ? <Brightness7 /> : <Brightness4 />}
       </IconButton>
-        <Toolbar />
-        
-  
-       
-    
+          </ListItem>
+ 
+          
         <Divider />
-        <List>
         <ListItem disablePadding>
             <ListItemButton onClick={()=>{
 navigate('/')
