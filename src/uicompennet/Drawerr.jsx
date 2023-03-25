@@ -5,6 +5,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import { useNavigate } from "react-router-dom";
+import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
@@ -14,7 +15,7 @@ import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import { List, Button } from '@mui/material';
-import { Create, Home, Logout, Person, Person2, Settings } from '@mui/icons-material';
+import { Brightness4, Brightness7, Create, Home, Logout, Person, Person2, Settings } from '@mui/icons-material';
 import { useTheme } from '@emotion/react';
 
 
@@ -37,12 +38,17 @@ const Drawerr = ({drawerWidth,setMymode}) => {
       >
 
 
-        <Button onClick={()=>{
-setMymode(theme.palette.mode==="light"?"dark" : "light")
-
-        }} variant="text" color="primary">
+        {/* <Button variant="text" color="primary">
           dark
-        </Button>
+        </Button> */}
+
+<IconButton sx={{ ml: 1 }}
+ onClick={()=>{
+  setMymode(theme.palette.mode==="light"?"dark" : "light")
+  
+          }} color="inherit">
+        {theme.palette.mode === 'dark' ? <Brightness7 /> : <Brightness4 />}
+      </IconButton>
         <Toolbar />
         
   
