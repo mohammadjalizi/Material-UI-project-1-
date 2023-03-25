@@ -51,6 +51,7 @@ const Drawerr = ({drawerWidth,setMymode}) => {
         <ListItem sx={{display:'flex',justifyContent:'center', mb:'14px'}} disablePadding>
         <IconButton sx={{ ml: 1 }}
  onClick={()=>{
+  localStorage.setItem("currenmymode",theme.palette.mode==="dark"? "light":'dark' )
   setMymode(theme.palette.mode==="light"?"dark" : "light")
   
           }} color="inherit">
