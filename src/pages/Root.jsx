@@ -5,7 +5,7 @@ import Appbar from '../uicompennet/Appbar'
 import Drawerr from '../uicompennet/Drawerr'
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import { purple,teal } from '@mui/material/colors';
+import { grey, purple,teal } from '@mui/material/colors';
 import { useState } from "react";
 
 const drawerWidth=240
@@ -26,7 +26,7 @@ const Root = () => {
             main:"#647488"
           },
           favcolor:{
-main:"#673ab7"
+main:grey[300]
 
           }
           }
@@ -37,7 +37,7 @@ main:"#673ab7"
               main:"teal"
             },
             favcolor:{
-              main:"#00bcd4"
+              main:grey[700]
              
               
                         }

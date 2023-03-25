@@ -22,7 +22,7 @@ import { useTheme } from '@emotion/react';
 const Drawerr = ({drawerWidth,setMymode}) => {
   const navigate = useNavigate();
     const theme=useTheme()
-    const loaction =useLocation
+    const loaction =useLocation()
  
   return (
     <div>
