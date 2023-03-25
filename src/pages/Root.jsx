@@ -24,11 +24,23 @@ const Root = () => {
           ali:{
 
             main:"#647488"
+          },
+          favcolor:{
+main:"#673ab7"
+
           }
           }
         : {
             // palette values for dark mode
-     
+            ali:{
+
+              main:"teal"
+            },
+            favcolor:{
+              main:"#00bcd4"
+             
+              
+                        }
        
         
           }),
