@@ -48,13 +48,13 @@ const Drawerr = ({drawerWidth,setMymode}) => {
     
    
         <List>
-        <ListItem sx={{display:'flex',justifyContent:'center'}} disablePadding>
+        <ListItem sx={{display:'flex',justifyContent:'center', mb:'14px'}} disablePadding>
         <IconButton sx={{ ml: 1 }}
  onClick={()=>{
   setMymode(theme.palette.mode==="light"?"dark" : "light")
   
           }} color="inherit">
-        {theme.palette.mode === 'dark' ? <Brightness7 /> : <Brightness4 />}
+        {theme.palette.mode === 'dark' ? <Brightness7 sx={{color:"orange"}} /> : <Brightness4 />}
       </IconButton>
           </ListItem>
  
