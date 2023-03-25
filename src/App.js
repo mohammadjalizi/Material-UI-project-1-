@@ -7,10 +7,6 @@ import {
 import Creact from "./pages/Creact/Creact";
 import Home from "./pages/Home/Home";
 import Root from "./pages/Root";
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
-import { purple,teal } from '@mui/material/colors';
-import { useState } from "react";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -24,21 +20,14 @@ const router = createBrowserRouter(
 );
 
 
-const darkTheme = createTheme({
-  palette: {
-    mode: 'dark',
-    primary:{main:teal[500]}
-  },
-});
+
 
 function App() {
-  const [mymode,setMymode]=useState("light")
+
   return  ( 
-    <ThemeProvider theme={darkTheme}>
-            <CssBaseline />
 
      <RouterProvider router={router} />  
-     </ThemeProvider>
+
      
      )
 

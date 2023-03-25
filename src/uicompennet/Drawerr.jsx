@@ -15,10 +15,12 @@ import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import { List, Button } from '@mui/material';
 import { Create, Home, Logout, Person, Person2, Settings } from '@mui/icons-material';
+import { useTheme } from '@emotion/react';
 
 
 const Drawerr = ({drawerWidth,setMymode}) => {
   const navigate = useNavigate();
+    const theme=useTheme()
   return (
     <div>
         <Drawer
@@ -36,7 +38,7 @@ const Drawerr = ({drawerWidth,setMymode}) => {
 
 
         <Button onClick={()=>{
-setMymode("light")
+setMymode(theme.palette.mode==="light"?"dark" : "light")
 
         }} variant="text" color="primary">
           dark
