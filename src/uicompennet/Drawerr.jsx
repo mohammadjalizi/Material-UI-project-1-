@@ -4,7 +4,7 @@ import Drawer from '@mui/material/Drawer';
 import CssBaseline from '@mui/material/CssBaseline';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
@@ -22,6 +22,8 @@ import { useTheme } from '@emotion/react';
 const Drawerr = ({drawerWidth,setMymode}) => {
   const navigate = useNavigate();
     const theme=useTheme()
+    const loaction =useLocation
+ 
   return (
     <div>
         <Drawer
@@ -61,7 +63,16 @@ const Drawerr = ({drawerWidth,setMymode}) => {
  
           
         <Divider />
-        <ListItem disablePadding>
+        <ListItem 
+          sx={{
+              bgcolor:
+              loaction.pathname==="/"
+              ?
+              theme.palette.primary.main
+              :null,
+          }} 
+          
+          disablePadding>
             <ListItemButton onClick={()=>{
 navigate('/')
 
