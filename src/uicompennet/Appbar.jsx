@@ -1,31 +1,34 @@
-import React from 'react'
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import Avatar from '@mui/material/Avatar';
+import React from "react";
+import { Toolbar, AppBar, Avatar, Link, Typography } from "@mui/material";
 import img from '../uicompennet/me.jpg'
 
-import MenuIcon from '@mui/icons-material/Menu';
-
-const drawerWidth = 240;
-const Appbar = ({drawerWidth}) => {
+const Appbar = ({ drawerWidth }) => {
   return (
-    <Box sx={{ flexGrow: 1 }}>
-    <AppBar position="static"
-     sx={{ width: `calc(100% - ${drawerWidth}px)`, ml: `${drawerWidth}px` }}>
+    <AppBar
+      sx={{ width: `calc(100% - ${drawerWidth}px)`, ml: `${drawerWidth}px` }}
+      position="static"
+    >
       <Toolbar>
-   
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          News
+        <Link
+          sx={{
+            flexGrow: 1,
+            textDecoration: "none",
+            "&:hover": { fontSize: "16.5px" },
+          }}
+          color="inherit"
+          href="/"
+        >
+          My expenses
+        </Link>
+
+        <Typography mr={2} variant="body1" color="inherit">
+          mohammadjalizi
         </Typography>
-        <Typography variant="body1"  sx={{mr:'20px'}}  color="inherit">mohammadjalizi</Typography>
-        <Avatar alt="Remy Sharp" src={img}/>
+
+        <Avatar alt="Remy Sharp" src={img} />
       </Toolbar>
     </AppBar>
-  </Box>
-  )
-}
+  );
+};
 
-export default Appbar
+export default Appbar;
