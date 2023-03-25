@@ -1,3 +1,4 @@
+import { Box } from '@mui/material'
 import React from 'react'
 import { Outlet } from 'react-router-dom'
 import Appbar from '../uicompennet/Appbar'
@@ -8,7 +9,11 @@ const Root = () => {
     <div>
 <Appbar drawerWidth={drawerWidth}/>
 <Drawerr drawerWidth={drawerWidth}/>
+<Box sx={{ml:`${drawerWidth}px`,display:'flex',justifyContent:'center'}}>
 <Outlet/>
+
+</Box>
+
 
     </div>
   )
