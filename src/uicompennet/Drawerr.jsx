@@ -4,7 +4,7 @@ import Drawer from '@mui/material/Drawer';
 import CssBaseline from '@mui/material/CssBaseline';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-
+import { useNavigate } from "react-router-dom";
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
@@ -18,6 +18,7 @@ import { Create, Home, Logout, Person, Person2, Settings } from '@mui/icons-mate
 
 
 const Drawerr = ({drawerWidth}) => {
+  const navigate = useNavigate();
   return (
     <div>
         <Drawer
@@ -40,7 +41,10 @@ const Drawerr = ({drawerWidth}) => {
         <Divider />
         <List>
         <ListItem disablePadding>
-            <ListItemButton>
+            <ListItemButton onClick={()=>{
+navigate('/')
+
+            }}>
               <ListItemIcon>
                 <Home />
               </ListItemIcon>
@@ -48,7 +52,10 @@ const Drawerr = ({drawerWidth}) => {
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton>
+            <ListItemButton onClick={()=>{
+navigate("/Create")
+
+            }}>  
               <ListItemIcon>
                 <Create />
               </ListItemIcon>
@@ -57,7 +64,10 @@ const Drawerr = ({drawerWidth}) => {
           </ListItem>
 
           <ListItem disablePadding>
-            <ListItemButton>
+            <ListItemButton onClick={()=>{
+
+              navigate("/Person2")
+            }}>
               <ListItemIcon>
                 <Person2 />
               </ListItemIcon>
