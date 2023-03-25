@@ -14,6 +14,7 @@ import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import { List } from '@mui/material';
+import { Create, Home, Logout, Person, Person2, Settings } from '@mui/icons-material';
 
 
 const Drawerr = ({drawerWidth}) => {
@@ -34,20 +35,54 @@ const Drawerr = ({drawerWidth}) => {
         <Toolbar />
         
   
+       
+    
         <Divider />
         <List>
         <ListItem disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                <InboxIcon />
+                <Home />
               </ListItemIcon>
-              <ListItemText primary="Inbox" />
+              <ListItemText primary="Home" />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <Create />
+              </ListItemIcon>
+              <ListItemText primary="Create" />
+            </ListItemButton>
+          </ListItem>
+
+          <ListItem disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <Person2 />
+              </ListItemIcon>
+              <ListItemText primary="profile" />
+            </ListItemButton>
+          </ListItem>
+
+          <ListItem disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <Settings />
+              </ListItemIcon>
+              <ListItemText primary="Settings" />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <Logout />
+              </ListItemIcon>
+              <ListItemText primary="Logout" />
             </ListItemButton>
           </ListItem>
   
         </List>
-        <Divider />
-     
       </Drawer>
     </div>
   )
