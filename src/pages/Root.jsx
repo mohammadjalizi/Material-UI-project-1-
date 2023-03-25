@@ -19,16 +19,20 @@ const Root = () => {
   const darkTheme = createTheme({
     palette: {
       mode,
-      ...(mode==="light"
-      ?{
-// lightmode
+      ...(mode === 'light'
+        ? {
+          ali:{
 
-      }:{
-// darkmode
-      })
-   
+            main:"#647488"
+          }
+          }
+        : {
+            // palette values for dark mode
+     
+       
+        
+          }),
     },
-
   });
   return (
     <ThemeProvider theme={darkTheme}>
