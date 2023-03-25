@@ -10,7 +10,7 @@ import { useState } from "react";
 
 const drawerWidth=240
 const Root = () => {
-  const [mymode,setMymode]=useState("dark")
+  const [mymode,setMymode]=useState(localStorage.getItem("currenmymode"))
   const darkTheme = createTheme({
     palette: {
       mode: mymode,
