@@ -1,6 +1,7 @@
 import React from "react";
-import { Toolbar, AppBar, Avatar, Link, Typography } from "@mui/material";
+import { Toolbar, AppBar, Avatar, Link, Typography, IconButton } from "@mui/material";
 import img from '../uicompennet/me.jpg'
+import { Menu } from "@mui/icons-material";
 
 const Appbar = ({ drawerWidth }) => {
   return (
@@ -9,6 +10,9 @@ const Appbar = ({ drawerWidth }) => {
       position="static"
     >
       <Toolbar>
+        <IconButton  sx={{display:{sm:'none'}}} >
+          <Menu/>
+        </IconButton>
         <Link
           sx={{
             flexGrow: 1,
