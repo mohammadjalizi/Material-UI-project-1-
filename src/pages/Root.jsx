@@ -10,7 +10,7 @@ import { useState } from "react";
 
 const drawerWidth=240
 const Root = () => {
-  const [mymode,setMymode]=useState(localStorage.getItem("currenmymode")==null
+  const [mode,setMymode]=useState(localStorage.getItem("currenmymode")==null
   ?"light"
   :localStorage.getItem("currenmymode")=="light"
   ?"light"
@@ -18,9 +18,17 @@ const Root = () => {
   )
   const darkTheme = createTheme({
     palette: {
-      mode: mymode,
-      primary:{main:teal[500]}
+      mode,
+      ...(mode==="light"
+      ?{
+// lightmode
+
+      }:{
+// darkmode
+      })
+   
     },
+
   });
   return (
     <ThemeProvider theme={darkTheme}>

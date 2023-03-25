@@ -18,7 +18,7 @@ const Creact = () => {
   return (
     <Box sx={{width:'366px'}} component="form" >   
     <TextField
-
+fullWidth={true}
     label="transtitile"
    
     sx={{    m: 1, mt: '22px' }}
@@ -29,9 +29,10 @@ const Creact = () => {
   />
   <br/>
   <TextField
+  fullWidth={true}
     label="transtitile"
 
-    sx={{ m: 1, mt: '22px', }}
+    sx={{ m: 1, mt: '22px',  }}
     InputProps={{
       startAdornment: <InputAdornment position="start">$</InputAdornment>,
     }}
