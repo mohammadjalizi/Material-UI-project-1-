@@ -13,11 +13,11 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
-import { List } from '@mui/material';
+import { List, Button } from '@mui/material';
 import { Create, Home, Logout, Person, Person2, Settings } from '@mui/icons-material';
 
 
-const Drawerr = ({drawerWidth}) => {
+const Drawerr = ({drawerWidth,setMymode}) => {
   const navigate = useNavigate();
   return (
     <div>
@@ -33,6 +33,14 @@ const Drawerr = ({drawerWidth}) => {
         variant="permanent"
         anchor="left"
       >
+
+
+        <Button onClick={()=>{
+setMymode("light")
+
+        }} variant="text" color="primary">
+          dark
+        </Button>
         <Toolbar />
         
   

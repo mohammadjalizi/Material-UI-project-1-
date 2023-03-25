@@ -10,6 +10,7 @@ import Root from "./pages/Root";
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { purple,teal } from '@mui/material/colors';
+import { useState } from "react";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -31,6 +32,7 @@ const darkTheme = createTheme({
 });
 
 function App() {
+  const [mymode,setMymode]=useState("light")
   return  ( 
     <ThemeProvider theme={darkTheme}>
             <CssBaseline />
