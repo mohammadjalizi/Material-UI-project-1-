@@ -53,7 +53,7 @@ main:grey[300]
 <Appbar drawerWidth={drawerWidth}/>
 <Drawerr drawerWidth={drawerWidth} setMymode={setMymode}/>
 
-<Box sx={{ml:`${drawerWidth}px`,display:'flex',justifyContent:'center'}}>
+<Box sx={{ml:{sm:`${drawerWidth}px`},display:'flex',justifyContent:'center'}}>
 <Outlet/>
 
 </Box>
