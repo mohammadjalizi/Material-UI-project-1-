@@ -39,7 +39,16 @@ fullWidth={true}
     variant="filled"
   />
   <br/>
- <ColorButton sx={{mt:'22px'}} variant="contained">
+ <ColorButton  onClick={()=>{
+fetch("",{
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify(data),
+})
+
+ }}  sx={{mt:'22px'}} variant="contained">
  submit <ChevronRight/>
  
  </ColorButton>
