@@ -19,7 +19,7 @@ import { Brightness4, Brightness7, Create, Home, Logout, Person, Person2, Settin
 import { useTheme } from '@emotion/react';
 
 
-const Drawerr = ({drawerWidth,setMymode,noneblock,drawertype,setnoneblock}) => {
+const Drawerr = ({drawerWidth,setMymode,noneblock,drawertype,setnoneblock,setdrawertype}) => {
   const navigate = useNavigate();
     const theme=useTheme()
     const loaction =useLocation()
@@ -43,6 +43,7 @@ const Drawerr = ({drawerWidth,setMymode,noneblock,drawertype,setnoneblock}) => {
         open={true}
         onClose={()=>{
           setnoneblock("none")
+          setdrawertype("permanent")
 
         }}
       >

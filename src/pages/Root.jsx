@@ -49,12 +49,18 @@ main:grey[300]
 
 const[noneblock,setnoneblock]=useState("none")
 const[drawertype,setdrawertype]=useState("permanent")
+const Showdrawer=()=>{
+
+  setnoneblock("none")
+  setdrawertype("permanent")
+
+}
   return (
     <ThemeProvider theme={darkTheme}>
     <CssBaseline />
     <div>
 <Appbar drawerWidth={drawerWidth} setnoneblock={setnoneblock} setdrawertype={setdrawertype} />
-<Drawerr drawerWidth={drawerWidth} setMymode={setMymode}  noneblock={noneblock} drawertype={drawertype} setnoneblock={setnoneblock}/>
+<Drawerr drawerWidth={drawerWidth} setMymode={setMymode}  noneblock={noneblock}    drawertype={drawertype} setnoneblock={setnoneblock}  setdrawertype={setdrawertype}  /    >
 
 <Box sx={{ml:{sm:`${drawerWidth}px`},display:'flex',justifyContent:'center'}}>
 <Outlet/>
