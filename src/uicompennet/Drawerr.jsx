@@ -85,7 +85,7 @@ return(
   <ListItem 
   sx={{
       bgcolor:
-      loaction.pathname==="/"
+      loaction.pathname===item.path
       ?
       theme.palette.favcolor.main
       :null,
@@ -93,7 +93,7 @@ return(
   
   disablePadding>
     <ListItemButton onClick={()=>{
-navigate('/')
+navigate(item.path)
 
     }}>
       <ListItemIcon>
