@@ -55,6 +55,11 @@ const Showdrawer =()=> {
   setdrawertype("permanent")
 
 }
+const hidedrawer=()=>{
+  setnoneblock("none")
+          setdrawertype("permanent")
+
+}
   return (
     <ThemeProvider theme={darkTheme}>
     <CssBaseline />
