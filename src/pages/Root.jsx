@@ -54,7 +54,7 @@ const[drawertype,setdrawertype]=useState("permanent")
     <CssBaseline />
     <div>
 <Appbar drawerWidth={drawerWidth} setnoneblock={setnoneblock} setdrawertype={setdrawertype} />
-<Drawerr drawerWidth={drawerWidth} setMymode={setMymode}  noneblock={noneblock} drawertype={drawertype}/>
+<Drawerr drawerWidth={drawerWidth} setMymode={setMymode}  noneblock={noneblock} drawertype={drawertype} setnoneblock={setnoneblock}/>
 
 <Box sx={{ml:{sm:`${drawerWidth}px`},display:'flex',justifyContent:'center'}}>
 <Outlet/>

@@ -19,7 +19,7 @@ import { Brightness4, Brightness7, Create, Home, Logout, Person, Person2, Settin
 import { useTheme } from '@emotion/react';
 
 
-const Drawerr = ({drawerWidth,setMymode,noneblock,drawertype}) => {
+const Drawerr = ({drawerWidth,setMymode,noneblock,drawertype,setnoneblock}) => {
   const navigate = useNavigate();
     const theme=useTheme()
     const loaction =useLocation()
@@ -40,6 +40,11 @@ const Drawerr = ({drawerWidth,setMymode,noneblock,drawertype}) => {
         }}
         variant={drawertype}
         anchor="left"
+        open={true}
+        onClose={()=>{
+          setnoneblock("none")
+
+        }}
       >
 
 
