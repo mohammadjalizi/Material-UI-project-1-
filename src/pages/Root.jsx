@@ -46,6 +46,8 @@ main:grey[300]
           }),
     },
   });
+
+const[noneblock,setnoneblock]=useState("none")
   return (
     <ThemeProvider theme={darkTheme}>
     <CssBaseline />
