@@ -42,7 +42,7 @@ const Drawerr = ({drawerWidth,setMymode,noneblock,drawertype,hidedrawer}) => {
         anchor="left"
         open={true}
         onClose={()=>{
-          hidedrawer()
+        hidedrawer()
 
         }}
       >
