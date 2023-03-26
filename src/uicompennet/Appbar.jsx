@@ -12,7 +12,7 @@ const Appbar = ({ drawerWidth,setnoneblock }) => {
       <Toolbar>
         <IconButton onClick={()=>{
 
-setnoneblock("block")
+setnoneblock("blcock")
 
         }}  sx={{display:{sm:'none'}}} >
           <Menu/>

@@ -34,7 +34,7 @@ const Drawerr = ({drawerWidth,setMymode,noneblock}) => {
           '& .MuiDrawer-paper': {
             width: drawerWidth,
             boxSizing: 'border-box',
-            xs:{display:"none"}
+          
           },
           
         }}
