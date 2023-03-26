@@ -28,6 +28,7 @@ const Drawerr = ({drawerWidth,setMymode}) => {
     <div>
         <Drawer
         sx={{
+          display:{xs:'none',sm:"block"},
           width: drawerWidth,
           flexShrink: 0,
           '& .MuiDrawer-paper': {
