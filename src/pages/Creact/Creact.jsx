@@ -20,6 +20,10 @@ const Creact = () => {
   return (
     <Box sx={{width:'366px'}} component="form" >   
     <TextField
+      onChange={(eo)=>{
+        settilte(eo.target.value)
+        
+          }}
 fullWidth={true}
     label="transtitile"
    
@@ -31,10 +35,10 @@ fullWidth={true}
   />
   <br/>
   <TextField
-  onChange={(eo)=>{
-settilte(eo.target.value)
+onChange={(eo)=>{
+setprice(Number(eo.target.value))
 
-  }}
+}}
   fullWidth={true}  
     label="transtitile"
 
