@@ -5,7 +5,8 @@ import Appbar from '../uicompennet/Appbar'
 import Drawerr from '../uicompennet/Drawerr'
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import { grey, purple,teal } from '@mui/material/colors';
+import getDesignTokens from '../styles/Mythem'
+
 import { useState } from "react";
 
 const drawerWidth=240
