@@ -52,7 +52,7 @@ const[noneblock,setnoneblock]=useState("none")
     <ThemeProvider theme={darkTheme}>
     <CssBaseline />
     <div>
-<Appbar drawerWidth={drawerWidth}/>
+<Appbar drawerWidth={drawerWidth} setnoneblock={setnoneblock}/>
 <Drawerr drawerWidth={drawerWidth} setMymode={setMymode}  noneblock={noneblock}/>
 
 <Box sx={{ml:{sm:`${drawerWidth}px`},display:'flex',justifyContent:'center'}}>
