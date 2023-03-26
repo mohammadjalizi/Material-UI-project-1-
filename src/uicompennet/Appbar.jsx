@@ -3,7 +3,7 @@ import { Toolbar, AppBar, Avatar, Link, Typography, IconButton } from "@mui/mate
 import img from '../uicompennet/me.jpg'
 import { Menu } from "@mui/icons-material";
 
-const Appbar = ({ drawerWidth,setnoneblock }) => {
+const Appbar = ({ drawerWidth,setnoneblock,setdrawertype }) => {
   return (
     <AppBar
       sx={{ width:{sm: `calc(100% - ${drawerWidth}px)`}, ml: {xs:0,sm:`${drawerWidth}px`} }}
@@ -13,6 +13,7 @@ const Appbar = ({ drawerWidth,setnoneblock }) => {
         <IconButton onClick={()=>{
 
 setnoneblock("blcock")
+setdrawertype("temporary")
 
         }}  sx={{display:{sm:'none'}}} >
           <Menu/>
