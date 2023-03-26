@@ -16,36 +16,6 @@ const Root = () => {
   ?"light"
 :"dark"  
   )
-  const darkTheme = createTheme({
-    palette: {
-      mode,
-      ...(mode === 'light'
-        ? {
-          ali:{
-
-            main:"#647488"
-          },
-          favcolor:{
-main:grey[300]
-
-          }
-          }
-        : {
-            // palette values for dark mode
-            ali:{
-
-              main:"teal"
-            },
-            favcolor:{
-              main:grey[700]
-             
-              
-                        }
-       
-        
-          }),
-    },
-  });
 
 const[noneblock,setnoneblock]=useState("none")
 const[drawertype,setdrawertype]=useState("permanent")
@@ -61,8 +31,9 @@ const hidedrawer=()=>{
           setdrawertype("permanent")
 
 }
+const theme = React.useMemo(() => createTheme(getDesignTokens(mode)), [mode]);
   return (
-    <ThemeProvider theme={darkTheme}>
+    <ThemeProvider theme={theme}>
     <CssBaseline />
     <div>
 <Appbar drawerWidth={drawerWidth} showdrawer={showdrawer}/>
