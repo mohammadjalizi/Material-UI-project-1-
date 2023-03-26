@@ -23,6 +23,13 @@ const Drawerr = ({drawerWidth,setMymode,noneblock,drawertype,hidedrawer}) => {
   const navigate = useNavigate();
     const theme=useTheme()
     const loaction =useLocation()
+    const myList=[
+
+      {text:'Home',icon:<Home />,path:'/'},
+      {text:'Create',icon:<Create/>,path:'/Create'},
+      {text:'profile',icon:<Person/>,path:'/profile'},
+      {text:'settings',icon:<Settings/>,path:'/settings'},
+    ]
  
   return (
     <div>
@@ -71,68 +78,42 @@ const Drawerr = ({drawerWidth,setMymode,noneblock,drawertype,hidedrawer}) => {
  
           
         <Divider />
-        <ListItem 
-          sx={{
-              bgcolor:
-              loaction.pathname==="/"
-              ?
-              theme.palette.favcolor.main
-              :null,
-          }} 
-          
-          disablePadding>
-            <ListItemButton onClick={()=>{
+
+        {myList.map(item=>{
+
+return(
+  <ListItem 
+  sx={{
+      bgcolor:
+      loaction.pathname==="/"
+      ?
+      theme.palette.favcolor.main
+      :null,
+  }} 
+  
+  disablePadding>
+    <ListItemButton onClick={()=>{
 navigate('/')
 
-            }}>
-              <ListItemIcon>
-                <Home />
-              </ListItemIcon>
-              <ListItemText primary="Home" />
-            </ListItemButton>
-          </ListItem>
+    }}>
+      <ListItemIcon>
+   {item.icon}
+      </ListItemIcon>
+      <ListItemText primary={item.text} />
+    </ListItemButton>
+  </ListItem>
 
-          <ListItem 
-            sx={{
-              bgcolor:
-              loaction.pathname==="/Create"
-              ?
-              theme.palette.favcolor.main
-              :null,
-          }} disablePadding>
-            <ListItemButton onClick={()=>{
-navigate("/Create")
+)
 
-            }}>  
-              <ListItemIcon>
-                <Create />
-              </ListItemIcon>
-              <ListItemText primary="Create" />
-            </ListItemButton>
-          </ListItem>
+        })}
+   
+
+     
 
 
 
-          <ListItem disablePadding>
-            <ListItemButton onClick={()=>{
-
-              navigate("/Person2")
-            }}>
-              <ListItemIcon>
-                <Person2 />
-              </ListItemIcon>
-              <ListItemText primary="profile" />
-            </ListItemButton>
-          </ListItem>
-
-          <ListItem disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                <Settings />
-              </ListItemIcon>
-              <ListItemText primary="Settings" />
-            </ListItemButton>
-          </ListItem>
+     
+      
           <ListItem disablePadding>
             <ListItemButton>
               <ListItemIcon>
