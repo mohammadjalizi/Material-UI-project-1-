@@ -19,7 +19,7 @@ import { Brightness4, Brightness7, Create, Home, Logout, Person, Person2, Settin
 import { useTheme } from '@emotion/react';
 
 
-const Drawerr = ({drawerWidth,setMymode}) => {
+const Drawerr = ({drawerWidth,setMymode,noneblock}) => {
   const navigate = useNavigate();
     const theme=useTheme()
     const loaction =useLocation()
@@ -28,7 +28,7 @@ const Drawerr = ({drawerWidth,setMymode}) => {
     <div>
         <Drawer
         sx={{
-          display:{xs:'none',sm:"block"},
+          display:{xs:noneblock,sm:"block"},
           width: drawerWidth,
           flexShrink: 0,
           '& .MuiDrawer-paper': {
