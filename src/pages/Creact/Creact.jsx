@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import TextField from '@mui/material/TextField';
 import InputAdornment from '@mui/material/InputAdornment';
 import { Box } from '@mui/material';
@@ -15,6 +15,8 @@ const ColorButton = styled(Button)(({ theme }) => ({
   },
 }));
 const Creact = () => {
+  const[title,settilte]=useState("")
+  const[price,setprice]=useState(0)
   return (
     <Box sx={{width:'366px'}} component="form" >   
     <TextField
@@ -29,6 +31,10 @@ fullWidth={true}
   />
   <br/>
   <TextField
+  onChange={(eo)=>{
+settilte(eo.target.value)
+
+  }}
   fullWidth={true}  
     label="transtitile"
 
@@ -40,7 +46,7 @@ fullWidth={true}
   />
   <br/>
  <ColorButton  onClick={()=>{
-fetch("",{
+fetch("  http://localhost:3002/mydata",{
   method: "POST",
   headers: {
     "Content-Type": "application/json",
