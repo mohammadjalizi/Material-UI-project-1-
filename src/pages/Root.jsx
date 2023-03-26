@@ -53,7 +53,7 @@ const[noneblock,setnoneblock]=useState("none")
     <CssBaseline />
     <div>
 <Appbar drawerWidth={drawerWidth}/>
-<Drawerr drawerWidth={drawerWidth} setMymode={setMymode}/>
+<Drawerr drawerWidth={drawerWidth} setMymode={setMymode}  noneblock={noneblock}/>
 
 <Box sx={{ml:{sm:`${drawerWidth}px`},display:'flex',justifyContent:'center'}}>
 <Outlet/>
