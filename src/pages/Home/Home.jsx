@@ -1,8 +1,16 @@
 import { Close } from '@mui/icons-material'
 import { Box, Paper, Typography, IconButton } from '@mui/material'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 const Home = () => {
+  const[mydata,setmydata]=useState([])
+  useEffect(()=>{
+
+    fetch("http://localhost:3100/mydata")
+    .then((response) => response.json())
+    .then((data) => setmydata(data) )
+
+  },[])
   return (
    <Box>
 
