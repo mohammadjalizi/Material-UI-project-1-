@@ -83,6 +83,8 @@ const Drawerr = ({drawerWidth,setMymode,noneblock,drawertype,hidedrawer}) => {
 
 return(
   <ListItem 
+
+  key={item.text}
   sx={{
       bgcolor:
       loaction.pathname===item.path
