@@ -23,12 +23,15 @@ return(
 
 <Typography variant="h6" > {item.title}</Typography>
 <Typography variant="h6" sx={{mr:'33px',fontWeight:500,opacity:'0.7'}} > ${item.price}</Typography>
-<IconButton sx={{position:'absolute',top:'0',right:'0'}}  >
+<IconButton onClick={()=>{
+fetch(`http://localhost:3100/mydata/${item.id}`,{method: "DELETE"})
+
+}} sx={{position:'absolute',top:'0',right:'0'}}  >
   <Close sx={{fontSize:'22px'}}/>
 </IconButton>
 
 </Paper>
-)
+) 
 
 })}
 
