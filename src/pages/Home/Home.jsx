@@ -10,7 +10,7 @@ const Home = () => {
     .then((response) => response.json())
     .then((data) => setmydata(data) )
 
-  },[])
+  },[mydata])
   console.log(mydata)
   return (
    <Box>
