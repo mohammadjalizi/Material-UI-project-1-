@@ -37,8 +37,14 @@ const theme = React.useMemo(() => createTheme(getDesignTokens(mode)), [mode]);
     <ThemeProvider theme={theme}>
     <CssBaseline />
     <div>
-<Appbar drawerWidth={drawerWidth} showdrawer={showdrawer}/>
-<Drawerr drawerWidth={drawerWidth} setMymode={setMymode}  noneblock={noneblock}    drawertype={drawertype} hidedrawer={hidedrawer} /    >
+<Appbar 
+{...{drawerWidth,showdrawer}}/>
+
+
+<Drawerr 
+
+{...{drawerWidth,setMymode,noneblock,drawertype,hidedrawer}} />
+
 
 <Box sx={{ml:{sm:`${drawerWidth}px`},display:'flex',justifyContent:'center'}}>
 <Outlet/>
