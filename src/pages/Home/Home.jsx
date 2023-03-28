@@ -23,9 +23,9 @@ return(
 
   <Paper
   
-  key={item.id}   sx={{width:"366px",display:'flex',justifyContent:'space-between',mt:'22px',pt:'27px',position:'relative'}}>
+  key={item.id}   sx={{width:"366px",display:'flex',justifyContent:'space-between',   mt:'22px',pt:'27px',position:'relative'}}>
 
-<Typography variant="h6" > {item.title}</Typography>
+<Typography sx={{mb:"10px"}} variant="h6" > {item.title}</Typography>
 <Typography variant="h6" sx={{mr:'33px',fontWeight:500,opacity:'0.7'}} > ${item.price}</Typography>
 <IconButton onClick={()=>{
 fetch(`http://localhost:3100/mydata/${item.id}`,{method: "DELETE"})
@@ -39,7 +39,7 @@ fetch(`http://localhost:3100/mydata/${item.id}`,{method: "DELETE"})
 
 })}
 
-<Typography variant="h4" > You Spend ${totalprice} </Typography>
+<Typography  mt='55px'  textAlign="center"   variant="h4" > 👉You Spend ${totalprice} </Typography>
 
    </Box>
   )
