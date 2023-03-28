@@ -11,10 +11,14 @@ const Home = () => {
     .then((data) => setmydata(data) )
 
   },[mydata])
-  console.log(mydata)
+
+
+let totalprice=0;
+
   return (
    <Box>
 {mydata.map(item=>{
+  totalprice+=item.price
 return(
 
   <Paper
@@ -35,7 +39,7 @@ fetch(`http://localhost:3100/mydata/${item.id}`,{method: "DELETE"})
 
 })}
 
-
+<Typography variant="h4" > You Spend ${totalprice} </Typography>
 
    </Box>
   )
