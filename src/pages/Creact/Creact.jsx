@@ -22,6 +22,7 @@ const Creact = () => {
   return (
     <Box sx={{ width: "366px" }} component="form">
       <TextField
+           autoComplete="off"
         onChange={(eo) => {
           settilte(eo.target.value);
           console.log(setprice)
@@ -36,6 +37,7 @@ const Creact = () => {
       />
       <br />
       <TextField
+          autoComplete="off"
         onChange={(eo) => {
           setprice(Number(eo.target.value));
         }}
