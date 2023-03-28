@@ -39,7 +39,7 @@ fetch(`http://localhost:3100/mydata/${item.id}`,{method: "DELETE"})
 
 })}
 
-<Typography  mt='55px'  textAlign="center"   variant="h4" > 👉You Spend ${totalprice} </Typography>
+<Typography  mt='55px'  textAlign="center"   variant="h6" > 👉You Spend ${totalprice} </Typography>
 
    </Box>
   )
