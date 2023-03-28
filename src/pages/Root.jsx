@@ -13,7 +13,7 @@ const drawerWidth=240
 const Root = () => {
   const [mode,setMymode]=useState(localStorage.getItem("currenmymode")==null
   ?"light"
-  :localStorage.getItem("currenmymode")=="light"
+  :localStorage.getItem("currenmymode")==="light"
   ?"light"
 :"dark"  
   )

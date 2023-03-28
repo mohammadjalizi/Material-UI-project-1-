@@ -7,7 +7,7 @@ import Button from "@mui/material/Button";
 
 import { purple } from "@mui/material/colors";
 import { ChevronRight } from "@mui/icons-material";
-import { Navigate, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 const ColorButton = styled(Button)(({ theme }) => ({
   color: theme.palette.getContrastText(purple[500]),
   backgroundColor: theme.palette.ali.main,
@@ -19,6 +19,7 @@ const Creact = () => {
   const [title, settilte] = useState("");
   const [price, setprice] = useState(0);
    const navigate=useNavigate()
+   
   return (
     <Box sx={{ width: "366px" }} component="form">
       <TextField
