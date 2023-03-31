@@ -53,6 +53,7 @@ const Creact = () => {
       <br />
       <ColorButton
         onClick={() => {
+         if(title.trim()){
           fetch("http://localhost:3100/mydata", {
             method: "POST",
             headers: {
@@ -63,6 +64,7 @@ const Creact = () => {
 
             navigate("/")
           })
+         }
         }}
         sx={{ mt: "22px" }}
         variant="contained"
